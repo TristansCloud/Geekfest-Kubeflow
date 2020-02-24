@@ -1,0 +1,311 @@
+{
+  "feature": [
+    {
+      "domain": {
+        "strings": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "company",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "stringDefaultValue": ""
+          }
+        }
+      },
+      "type": "BYTES"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "dropoff_census_tract",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "dropoff_community_area",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "dropoff_latitude",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "dropoff_longitude",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "fare",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "strings": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "payment_type",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "stringDefaultValue": ""
+          }
+        }
+      },
+      "type": "BYTES"
+    },
+    {
+      "domain": {
+        "strings": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "pickup_census_tract",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "stringDefaultValue": ""
+          }
+        }
+      },
+      "type": "BYTES"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "pickup_community_area",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "pickup_latitude",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "pickup_longitude",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "tips",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "trip_miles",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "trip_seconds",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "trip_start_day",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "trip_start_hour",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "floats": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "trip_start_month",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "floatDefaultValue": 0.0
+          }
+        }
+      },
+      "type": "FLOAT"
+    },
+    {
+      "domain": {
+        "strings": {}
+      },
+      "fixedShape": {
+        "axis": []
+      },
+      "name": "trip_start_timestamp",
+      "parsingOptions": {
+        "tfOptions": {
+          "fixedLenFeature": {
+            "stringDefaultValue": ""
+          }
+        }
+      },
+      "type": "BYTES"
+    }
+  ],
+  "sparseFeature": []
+}

@@ -1,0 +1,32 @@
+### Some extra resources:
+
+kale examples: git clone https://github.com/kubeflow-kale/examples.git
+
+
+Good post on building docker images of models https://towardsdatascience.com/how-to-create-and-deploy-a-kubeflow-machine-learning-pipeline-part-1-efea7a4b650f
+
+The successful tf-job uses this code https://github.com/kubeflow/tf-operator/tree/master/examples/v1/mnist_with_summaries
+
+Here is NAS repo for kubeflow https://github.com/kubeflow/katib/tree/master/pkg/suggestion/v1alpha3/NAS_Reinforcement_Learning
+NAS CPU cifar10 https://github.com/kubeflow/katib/blob/master/examples/v1alpha3/NAS-training-containers/RL-cifar10/Dockerfile.cpu
+Actual yaml for NAS
+
+Changing istio nodeport to load balancer: https://www.kubeflow.org/docs/started/k8s/kfctl-existing-arrikto/#expose-with-a-loadbalancer
+
+
+Good tune tutorial https://ray.readthedocs.io/en/latest/tune-tutorial.html
+
+How to set up a ray node: https://ray.readthedocs.io/en/latest/configure.html  --v
+# Connect to ray. Notice if connected to existing cluster, you don't specify resources.
+ray.init(address=<address>)
+
+helm install \
+  nfs-client-provisioner \
+  --set nfs.server=10.178.48.83 \
+  --set nfs.path=/nfsroot\
+  --set storageClass.name=nfs \
+  --set storageClass.defaultClass=true \
+  stable/nfs-client-provisioner
+
+
+* In order to setup TensorFlow Model Analysis in a TFX pipeline, an EvalSavedModel needs to be exported during training, which is a special SavedModel containing annotations for the metrics, features, labels, and so on in your model. TensorFlow Model Analysis uses this EvalSavedModel to compute metrics.

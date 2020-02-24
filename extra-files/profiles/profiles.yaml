@@ -1,0 +1,35 @@
+apiVersion: kubeflow.org/v1beta1
+kind: Profile
+metadata:
+  name: redteam   # replace with the name of profile you want
+spec:
+  owner:
+    kind: User 
+    name: redteam@email.com   # replace with the email of the user
+---
+apiVersion: kubeflow.org/v1beta1
+kind: Profile
+metadata:
+  name: blueteam   # replace with the name of profile you want
+spec:
+  owner:
+    kind: User
+    name: blueteam@email.com   # replace with the email of the user
+---
+apiVersion: kubeflow.org/v1beta1
+kind: Profile
+metadata:
+  name: yellowteam   # replace with the name of profile you want
+spec:
+  owner:
+    kind: User
+    name: yellowteam@email.com   # replace with the email of the user
+---
+apiVersion: kubeflow.org/v1beta1
+kind: Profile
+metadata:
+  name: greenteam   # replace with the name of profile you want
+spec:
+  owner:
+    kind: User
+    name: greenteam@email.com   # replace with the email of the user

@@ -1,0 +1,60 @@
+apiVersion: "kubeflow.org/v1alpha3"
+kind: Experiment
+metadata:
+  namespace: kubeflow
+  name: tk-katib
+spec:
+  parallelTrialCount: 1
+  maxTrialCount: 12
+  maxFailedTrialCount: 3
+  objective:
+    type: maximize
+    goal: 0.999
+    objectiveMetricName: accuracy_1
+  algorithm:
+    algorithmName: random
+  metricsCollectorSpec:
+    source:
+      fileSystemPath:
+        path: ~/mnist
+        kind: Directory
+    collector:
+      kind: TensorFlowEvent
+  parameters:
+    - name: --learning_rate
+      parameterType: double
+      feasibleSpace:
+        min: "0.01"
+        max: "0.05"
+    - name: --batch_size
+      parameterType: int
+      feasibleSpace:
+        min: "10"
+        max: "100"
+  trialTemplate:
+    goTemplate:
+        rawTemplate: |-
+          apiVersion: "kubeflow.org/v1"
+          kind: TFJob
+          metadata:
+            name: {{.Trial}}
+            namespace: {{.NameSpace}}
+          spec:
+           tfReplicaSpecs:
+            Worker:
+              replicas: 1 
+              restartPolicy: OnFailure
+              template:
+                spec:
+                  containers:
+                    - name: tensorflow 
+                      image: tristankcloud/geekfest-katibmodel:first
+                      imagePullPolicy: Always
+                      command:
+                        - "python"
+                        - "/opt/katib.py"
+                        {{- with .HyperParameters}}
+                        {{- range .}}
+                        - "{{.Name}}={{.Value}}"
+                        {{- end}}
+                        {{- end}}

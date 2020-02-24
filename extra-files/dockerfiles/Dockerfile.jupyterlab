@@ -1,0 +1,7 @@
+FROM gcr.io/kubeflow-images-public/tensorflow-1.14.0-notebook-cpu:v0.7.0
+USER root
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir kubeflow-kale seaborn sklearn jupyterlab \
+    && jupyter labextension install kubeflow-kale-launcher
+ENV NB_PREFIX /
+CMD ["sh","-c", "jupyter notebook --notebook-dir=/home/jovyan --ip=0.0.0.0 --no-browser --allow-root --port=8888 --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_origin='*' --NotebookApp.base_url=${NB_PREFIX}"]

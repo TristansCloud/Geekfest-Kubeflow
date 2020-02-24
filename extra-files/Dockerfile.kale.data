@@ -1,0 +1,3 @@
+FROM tristankcloud/kale-notebook:latest
+
+ADD train.csv test.csv /tf/data/
