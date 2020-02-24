@@ -1,0 +1,31 @@
+site_name: Kubeflow
+
+pages:
+    - Home: ml_0.0_index.md
+    - Table of contents: ml_1.0_index.md
+    - Introduction and Setup: ml_2.0_index.md
+    - Understanding Katib formatting and hyperparameter tuning: ml_3.0_index.md
+    - Building and deploying pipelines: ml_4.0_index.md
+
+#theme: readthedocs
+copyright: 'Copyright &copy; 2020 CloudOps'
+theme:
+  name: 'readthedocs'
+  logo: './images/cloudops_logo.png'
+extra:
+  logo: './images/cloudops_logo.png'
+  palette:
+    primary: 'light blue'
+    accent: 'light blue'
+  social:
+    - type: 'twitter'
+      link: 'https://twitter.com/CloudOps_'
+    - type: 'linkedin'
+      link: 'https://ca.linkedin.com/company/cloudops'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - footnotes
